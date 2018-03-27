@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import "/node_modules/material-design-lite/material.min.css"
+
 
 class FeedbackForm extends Component {
     constructor(props) {
@@ -29,7 +29,7 @@ class FeedbackForm extends Component {
             {/* <input type="submit" value="Submit" /> */}
             </div>
             <div className="feedback-form-actions">
-            <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            <button className="btn btn-primary">
             Submit feedback!
             </button>
             </div>
