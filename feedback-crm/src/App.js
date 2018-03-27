@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import FeedbackForm from './Components/feedbackForm/feedbackForm';
+import FeedbackBox from './Components/feedbackBox/feedbackBox';
 
 
 class App extends Component {
@@ -9,6 +10,8 @@ class App extends Component {
     return (
       <div className="App">
         <FeedbackForm />
+        
+        <FeedbackBox />
       </div>
     )
   }

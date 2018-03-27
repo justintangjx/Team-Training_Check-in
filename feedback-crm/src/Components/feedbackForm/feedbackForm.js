@@ -1,41 +1,46 @@
-import React, { Component } from 'react';
-
-
+import React, { Component } from "react";
 
 class FeedbackForm extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {value: '' };
+  constructor(props) {
+    super(props);
+    this.state = { value: "" };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    }
+  }
 
-    handleChange(event) {
-        this.setState({value: event.target.value});
-      }
-    
-      handleSubmit(event) {
-        alert('Feedback was submitted :) ');
-        event.preventDefault();
-      }
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
 
-      render() {
+  handleSubmit(event) {
+    alert("Feedback was submitted :) ");
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <form className="feedback-form" onSubmit={this.handleSubmit.bind(this)}>
+        <label> Based on the following action: </label>
+        <textarea
+          className="form-control"
+          value={this.state.value}
+          onChange={this.handleChange}
+        />
+        <label> Please continue to: </label>
+        <div className="feedback-form-fields">
+          <textarea
+            className="form-control"
+            value={this.state.value}
+            onChange={this.handleChange}
+          />
+        </div>
+        <div className="feedback-form-actions">
+          <button className="btn btn-primary">Submit feedback!</button>
+        </div>
         
-        return (
-          <form className="feedback-form" onSubmit={this.handleSubmit.bind(this)}>
-            <label> Please continue to: </label>
-            <div className="feedback-form-fields">
-            <textarea value={this.state.value} onChange={this.handleChange} />
-            {/* <input type="submit" value="Submit" /> */}
-            </div>
-            <div className="feedback-form-actions">
-            <button className="btn btn-primary">
-            Submit feedback!
-            </button>
-            </div>
-          </form>
-          )
-        };
-    };
+      </form>
+    );
+  }
+}
 
-      export default FeedbackForm;
+export default FeedbackForm;
