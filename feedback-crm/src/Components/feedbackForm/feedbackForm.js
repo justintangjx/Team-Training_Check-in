@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import "/node_modules/material-design-lite/material.min.css"
 
 class FeedbackForm extends Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class FeedbackForm extends Component {
       }
     
       handleSubmit(event) {
-        alert('Feedback was submitted :) ' + this.state.value);
+        alert('Feedback was submitted :) ');
         event.preventDefault();
       }
 
@@ -28,7 +29,7 @@ class FeedbackForm extends Component {
             {/* <input type="submit" value="Submit" /> */}
             </div>
             <div className="feedback-form-actions">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
             Submit feedback!
             </button>
             </div>
