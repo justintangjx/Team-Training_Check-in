@@ -3,7 +3,9 @@ import { shallow } from "enzyme";
 import DisplaySingleFeedback from './singleFeedback';
 
 describe("singleFeedback", () => {
-    it('should display action and improvement', () => {
-        const 
-    })
+    it('should removes feedback item upon clicking delete', () => {
+        const testHandler = jest.fn();
+        const wrapper = shallow()
+        expect(testHandler).toBeCalled();
+    });
 })

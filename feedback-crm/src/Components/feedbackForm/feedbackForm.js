@@ -35,7 +35,7 @@ class FeedbackForm extends Component {
       <form className="feedback-form" onSubmit={this.handleSubmit.bind(this)}>
         <p className="text-primary"><strong> Based on the following action: </strong></p>
         <textarea
-          className="form-control"
+          className="form-control border border-primary"
           value={this.state.actionValue}
           onChange={this.handleChangeForActionInput}
         />
@@ -44,7 +44,7 @@ class FeedbackForm extends Component {
         {/* <label><strong> Please continue to: </strong></label> */}
         <div className="feedback-form-fields">
           <textarea
-            className="form-control"
+            className="form-control border border-primary"
             value={this.state.improvementValue}
             onChange={this.handleChangeForImprovementInput}
           />
