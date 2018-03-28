@@ -3,18 +3,30 @@ import React, { Component } from "react";
 class FeedbackForm extends Component {
   constructor(props) {
     super(props);
-    this.state = { value: "" };
-    this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      actionValue: "",
+      improvementValue: ""
+    };
+    this.handleChangeForActionInput = this.handleChangeForActionInput.bind(
+      this
+    );
+    this.handleChangeForImprovementInput = this.handleChangeForImprovementInput.bind(
+      this
+    );
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({ value: event.target.value });
+  handleChangeForActionInput(event) {
+    this.setState({ actionValue: event.target.value });
+  }
+
+  handleChangeForImprovementInput(event) {
+    this.setState({ improvementValue: event.target.value });
   }
 
   handleSubmit(event) {
-    alert("Feedback was submitted :) ");
     event.preventDefault();
+    this.props.addFeedback(this.state.actionValue, this.state.improvementValue);
   }
 
   render() {
@@ -23,21 +35,20 @@ class FeedbackForm extends Component {
         <label> Based on the following action: </label>
         <textarea
           className="form-control"
-          value={this.state.value}
-          onChange={this.handleChange}
+          value={this.state.actionValue}
+          onChange={this.handleChangeForActionInput}
         />
         <label> Please continue to: </label>
         <div className="feedback-form-fields">
           <textarea
             className="form-control"
-            value={this.state.value}
-            onChange={this.handleChange}
+            value={this.state.improvementValue}
+            onChange={this.handleChangeForImprovementInput}
           />
         </div>
         <div className="feedback-form-actions">
           <button className="btn btn-primary">Submit feedback!</button>
         </div>
-        
       </form>
     );
   }
