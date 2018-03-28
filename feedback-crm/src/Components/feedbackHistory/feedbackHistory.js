@@ -1,11 +1,11 @@
 import React from "react";
-import SingleFeedback from '../singleFeedback/singleFeedback';
+import DisplaySingleFeedback from '../singleFeedback/singleFeedback';
 
 
 const FeedbackHistory = props => (
   <div>
     {props.feedbackList.map((feedback, i) => {
-      return <SingleFeedback key={i} feedback={feedback} />;
+      return <DisplaySingleFeedback key={i} feedback={feedback} />;
     })}
   </div>
 );
