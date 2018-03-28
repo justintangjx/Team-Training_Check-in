@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { feedbackList } from "../../utils/seedData";
 import FeedbackForm from "../feedbackForm/feedbackForm";
-import FeedbackHistory from '../feedbackHistory/feedbackHistory';
-
+import FeedbackHistory from "../feedbackHistory/feedbackHistory";
 
 class FeedbackBox extends Component {
   constructor() {
@@ -22,6 +21,17 @@ class FeedbackBox extends Component {
     });
   }
 
+  handleDelete(feedbackToBeDeleted) {
+    console.log(feedbackToBeDeleted);
+
+    let newFeedbackListAfterDelete = this.state.feedbackList.filter(
+      feedback => feedback !== feedbackToBeDeleted
+    );
+
+    console.log(newFeedbackListAfterDelete);
+    this.setState({feedbackList: newFeedbackListAfterDelete});
+  }
+
   render() {
     return (
       <div id="feedbackHistory">
@@ -30,8 +40,12 @@ class FeedbackBox extends Component {
           newFeedback={this.state.newFeedback}
           addFeedback={this.addFeedback.bind(this)}
         />
-        <FeedbackHistory 
-        feedbackList={this.state.feedbackList} />
+        <p />
+        <p id="history-line"> Feedback History - Well done! </p>
+        <FeedbackHistory
+          feedbackList={this.state.feedbackList}
+          handleDelete={this.handleDelete.bind(this)}
+        />
       </div>
     );
   }
