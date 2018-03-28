@@ -29,7 +29,7 @@ class FeedbackBox extends Component {
     );
 
     console.log(newFeedbackListAfterDelete);
-    this.setState({feedbackList: newFeedbackListAfterDelete});
+    this.setState({ feedbackList: newFeedbackListAfterDelete });
   }
 
   render() {
@@ -41,7 +41,11 @@ class FeedbackBox extends Component {
           addFeedback={this.addFeedback.bind(this)}
         />
         <p />
-        <p id="history-line"> Feedback History - Well done! </p>
+        <p className="p-3 mb-2 bg-secondary text-white">
+          <strong>
+            <em> Feedback History - Well done!</em>{" "}
+          </strong>
+        </p>
         <FeedbackHistory
           feedbackList={this.state.feedbackList}
           handleDelete={this.handleDelete.bind(this)}

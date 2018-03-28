@@ -30,20 +30,18 @@ class FeedbackForm extends Component {
     this.props.addFeedback(this.state.actionValue, this.state.improvementValue);
   }
 
-  
-
   render() {
     return (
-    
       <form className="feedback-form" onSubmit={this.handleSubmit.bind(this)}>
-        <label> Based on the following action: </label>
+        <p className="text-primary"><strong> Based on the following action: </strong></p>
         <textarea
           className="form-control"
           value={this.state.actionValue}
           onChange={this.handleChangeForActionInput}
         />
-        <p/>
-        <label> Please continue to: </label>
+        <br />
+        <p className="text-primary"><strong>Please continue to:</strong></p>
+        {/* <label><strong> Please continue to: </strong></label> */}
         <div className="feedback-form-fields">
           <textarea
             className="form-control"
@@ -51,12 +49,12 @@ class FeedbackForm extends Component {
             onChange={this.handleChangeForImprovementInput}
           />
         </div>
-        <p/>
+        <p />
         <div className="feedback-form-actions">
-          <button className="btn btn-primary btn-lg btn-block">Submit feedback!</button>
+          <button className="btn btn-primary btn-lg">Submit feedback!</button>
         </div>
+        
       </form>
-
     );
   }
 }
