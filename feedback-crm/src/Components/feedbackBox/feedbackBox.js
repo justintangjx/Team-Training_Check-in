@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { feedbackList } from "../../utils/seedData";
 import FeedbackForm from "../feedbackForm/feedbackForm";
+import FeedbackHistory from '../feedbackHistory/feedbackHistory';
+
 
 class FeedbackBox extends Component {
   constructor() {
@@ -28,6 +30,8 @@ class FeedbackBox extends Component {
           newFeedback={this.state.newFeedback}
           addFeedback={this.addFeedback.bind(this)}
         />
+        <FeedbackHistory 
+        feedbackList={this.state.feedbackList} />
       </div>
     );
   }
