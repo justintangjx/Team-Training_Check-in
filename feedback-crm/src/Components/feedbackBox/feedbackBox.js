@@ -40,12 +40,11 @@ class FeedbackBox extends Component {
           newFeedback={this.state.newFeedback}
           addFeedback={this.addFeedback.bind(this)}
         />
-        <p />
         <p className="p-3 mb-2 bg-secondary text-white">
           <strong>
             <em> Feedback History - Well done!</em>{" "}
           </strong>
-        </p>
+        </ p>
         <FeedbackHistory
           feedbackList={this.state.feedbackList}
           handleDelete={this.handleDelete.bind(this)}
@@ -55,6 +54,7 @@ class FeedbackBox extends Component {
   }
 
   addFeedback(actionValue, improvementValue) {
+    
     const exampleFeedback = {
       id: this.state.feedbackList.length + 1,
       action: actionValue,
