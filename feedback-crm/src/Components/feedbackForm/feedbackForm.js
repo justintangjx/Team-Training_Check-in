@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 class FeedbackForm extends Component {
   constructor(props) {
     super(props);
@@ -33,14 +32,18 @@ class FeedbackForm extends Component {
   render() {
     return (
       <form className="feedback-form" onSubmit={this.handleSubmit.bind(this)}>
-        <p className="text-primary"><strong> Based on the following action: </strong></p>
+        <p className="text-primary">
+          <strong> Based on the following action: </strong>
+        </p>
         <textarea
           className="form-control border border-primary"
           value={this.state.actionValue}
           onChange={this.handleChangeForActionInput}
         />
         <br />
-        <p className="text-primary"><strong>Please continue to:</strong></p>
+        <p className="text-primary">
+          <strong>Please continue to:</strong>
+        </p>
         {/* <label><strong> Please continue to: </strong></label> */}
         <div className="feedback-form-fields">
           <textarea
@@ -53,7 +56,6 @@ class FeedbackForm extends Component {
         <div className="feedback-form-actions">
           <button className="btn btn-primary btn-lg">Submit feedback!</button>
         </div>
-        
       </form>
     );
   }
