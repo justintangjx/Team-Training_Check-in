@@ -3,6 +3,7 @@ import { feedbackList } from "../../utils/seedData";
 import FeedbackForm from "../feedbackForm/feedbackForm";
 import FeedbackHistory from "../feedbackHistory/feedbackHistory";
 
+
 class FeedbackBox extends Component {
   constructor() {
     super();
@@ -65,6 +66,7 @@ class FeedbackBox extends Component {
       feedbackList: this.state.feedbackList.concat([exampleFeedback])
     });
   }
-}
+};
+
 
 export default FeedbackBox;

@@ -10,11 +10,9 @@ describe.only("FeedbackBox", () => {
 
     expect(
       wrapper
-        .props("feedbackList")
-        .contains(
-          "singing", "needs more timbre")
+        .state().feedbackList[1]
         )
-    .toEqual(true);
+    .toEqual({"action": "singing", "id": 2, "improvement": "needs more timbre"});
       
   });
 });
