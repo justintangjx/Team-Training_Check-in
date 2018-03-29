@@ -62,4 +62,8 @@ class FeedbackForm extends Component {
   }
 }
 
+FeedbackForm.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+}
+
 export default FeedbackForm;
