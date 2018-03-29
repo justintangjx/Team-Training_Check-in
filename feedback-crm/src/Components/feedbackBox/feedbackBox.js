@@ -23,13 +23,9 @@ class FeedbackBox extends Component {
   }
 
   handleDelete(feedbackToBeDeleted) {
-    console.log(feedbackToBeDeleted);
-
     let newFeedbackListAfterDelete = this.state.feedbackList.filter(
       feedback => feedback !== feedbackToBeDeleted
     );
-
-    console.log(newFeedbackListAfterDelete);
     this.setState({ feedbackList: newFeedbackListAfterDelete });
   }
 

@@ -5,7 +5,7 @@ import FeedbackBox from "../feedbackBox/feedbackBox";
 
 // import FeedbackBox from '../feedbackBox/feedbackBox';
 
-describe.skip("FeedbackForm", () => {
+describe("FeedbackForm", () => {
   it("should allow submission of feedback upon clicked", () => {
     const mockAddFeedback = jest.fn();
     const wrapper = shallow(<FeedbackForm addFeedback={mockAddFeedback}/>);
