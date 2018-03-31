@@ -31,6 +31,8 @@ class FeedbackForm extends Component {
   }
 
   render() {
+    const { actionValue, improvementValue } = this.state;
+    const checkForNull = actionValue === "" && improvementValue === "";
     return (
       <form className="feedback-form" onSubmit={this.handleSubmit.bind(this)}>
         <p className="text-primary">
@@ -55,7 +57,9 @@ class FeedbackForm extends Component {
         </div>
         <p />
         <div className="feedback-form-actions">
-          <button className="btn btn-primary btn-lg">Submit feedback!</button>
+          {!checkForNull && (
+            <button className="btn btn-primary btn-lg">Submit feedback!</button>
+          )}
         </div>
       </form>
     );
