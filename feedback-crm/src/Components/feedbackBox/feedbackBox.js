@@ -3,7 +3,6 @@ import { feedbackList } from "../../utils/seedData";
 import FeedbackForm from "../feedbackForm/feedbackForm";
 import FeedbackHistory from "../feedbackHistory/feedbackHistory";
 
-
 class FeedbackBox extends Component {
   constructor() {
     super();
@@ -37,11 +36,11 @@ class FeedbackBox extends Component {
           newFeedback={this.state.newFeedback}
           addFeedback={this.addFeedback.bind(this)}
         />
-        <p className="p-3 mb-2 bg-secondary text-white">
+        <p className="p-3 mb-2 bg-secondary text-white text-center">
           <strong>
             <em> Feedback History - Well done!</em>{" "}
           </strong>
-        </ p>
+        </p>
         <FeedbackHistory
           feedbackList={this.state.feedbackList}
           handleDelete={this.handleDelete.bind(this)}
@@ -51,7 +50,6 @@ class FeedbackBox extends Component {
   }
 
   addFeedback(actionValue, improvementValue) {
-    
     const exampleFeedback = {
       id: this.state.feedbackList.length + 1,
       action: actionValue,
@@ -62,7 +60,6 @@ class FeedbackBox extends Component {
       feedbackList: this.state.feedbackList.concat([exampleFeedback])
     });
   }
-};
-
+}
 
 export default FeedbackBox;

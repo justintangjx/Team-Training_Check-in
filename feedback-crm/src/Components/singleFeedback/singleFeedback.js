@@ -7,12 +7,14 @@ class DisplaySingleFeedback extends Component {
         <div className="card-body">
           <p className="feedback-header">{this.props.feedback.action}</p>
           <p className="feedback-body">{this.props.feedback.improvement}</p>
-          <button
-            className="btn btn-secondary btn-sm"
-            onClick={this.props.handleDelete}
-          >
-            Delete
-          </button>
+          <p className="text-right">
+            <button
+              className="btn btn-secondary btn-sm"
+              onClick={this.props.handleDelete}
+            >
+              Delete
+            </button>
+          </p>
         </div>
       </div>
     );

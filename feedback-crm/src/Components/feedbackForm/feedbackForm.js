@@ -35,7 +35,7 @@ class FeedbackForm extends Component {
     const checkForNull = actionValue === "" || improvementValue === "";
     return (
       <form className="feedback-form" onSubmit={this.handleSubmit.bind(this)}>
-        <p className="text-primary">
+        <p className="text-primary text-center">
           <strong> Based on the following action: </strong>
         </p>
         <textarea
@@ -44,7 +44,7 @@ class FeedbackForm extends Component {
           onChange={this.handleChangeForActionInput}
         />
         <br />
-        <p className="text-primary">
+        <p className="text-primary text-center">
           <strong>Please continue to:</strong>
         </p>
         {/* <label><strong> Please continue to: </strong></label> */}
@@ -56,10 +56,11 @@ class FeedbackForm extends Component {
           />
         </div>
         <p />
-        <div className="feedback-form-actions">
+        <div className="feedback-form-actions text-center">
           {!checkForNull && (
             <button className="btn btn-primary btn-lg">Submit feedback!</button>
           )}
+          <p/>
         </div>
       </form>
     );

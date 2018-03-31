@@ -10,7 +10,7 @@ class App extends Component {
       <BrowserRouter>
       <div>
 
-        <div className="top-layout">
+        <div className="toplayout">
           <Navtabs />
           <Route exact path="/awesome" component={FeedbackBox} />
           <Route exact path="/toimprove" component ={FeedbackBox} />
