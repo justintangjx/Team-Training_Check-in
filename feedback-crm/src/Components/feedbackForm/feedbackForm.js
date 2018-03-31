@@ -32,7 +32,7 @@ class FeedbackForm extends Component {
 
   render() {
     const { actionValue, improvementValue } = this.state;
-    const checkForNull = actionValue === "" && improvementValue === "";
+    const checkForNull = actionValue === "" || improvementValue === "";
     return (
       <form className="feedback-form" onSubmit={this.handleSubmit.bind(this)}>
         <p className="text-primary">
