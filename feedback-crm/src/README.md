@@ -1,18 +1,20 @@
-# Team Relationship Management (TRM) system -- How to manage your team's feedback better
+# Team Relationship Management (TRM)
 
-Team Relationship Mangagement (TRM). 
+This application tool allows: 
+1. Anonymous and transparent feedback collection for indivduals  
+2. Managers to better track feedback -- fact-based and can rely on it as a log for appraisals.
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+### How to intsall
 
-What things you need to install the software and how to install them
-
+1. ```git clone https://github.com/justintangjx/feedback-crm.git
 ```
-Give examples
+2. Download packages, libraries and dependencies by ```yarn install
 ```
+3. ```yarn start``` 
 
 ### Installing
 

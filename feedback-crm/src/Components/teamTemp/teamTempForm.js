@@ -17,6 +17,6 @@ class TeamScoreForm extends Component {
   }
   handleSubmit(event) {
       event.preventDefault();
-      this.props.
+  
   }
 }
