@@ -16,31 +16,23 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### How to use it
 
-A step by step series of examples that tell you have to get a development env running
+For individuals' strengths, use the first tab.
 
-Say what the step will be
+For individuals' weaknesses, use the second tab.
 
-```
-Give the example
-```
+For managers, track team's morale with last (and third tab).
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
-1. ```yarn test``` for unit tests
+1. ```yarn test``` for unit tests. (```yarn test --coverage`` can be used to check coverage of unit testing).
 
 ## Deployment
 
 To deploy this on a live system: 
 1. ```heroku create -b https://github.com/mars/create-react-app-buildpack.git``` to create buildpack.
 2. Create ```travis.yml``` file
+
 
 ## Built With
 
