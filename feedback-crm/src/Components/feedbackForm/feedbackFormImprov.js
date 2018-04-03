@@ -1,3 +1,4 @@
+// see my comments in feedbackBoxImprov.js
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
@@ -60,7 +61,7 @@ class FeedbackFormImprov extends Component {
           {!checkForNull && (
             <button className="btn btn-primary btn-lg">Submit feedback!</button>
           )}
-          <p/>
+          <p />
         </div>
       </form>
     );

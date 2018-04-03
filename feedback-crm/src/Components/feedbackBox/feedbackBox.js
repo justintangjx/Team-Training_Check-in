@@ -31,7 +31,7 @@ class FeedbackBox extends Component {
   render() {
     return (
       <div id="feedbackHistory">
-      <br />
+        <br />
         <FeedbackForm
           saveFeedback={this.saveFeedback.bind(this)}
           newFeedback={this.state.newFeedback}
@@ -39,7 +39,7 @@ class FeedbackBox extends Component {
         />
         <p className="p-3 mb-2 bg-secondary text-white text-center">
           <strong>
-            <em> Feedback History - Well done!</em>{" "}
+            <em> Feedback History - {this.props.message}</em>{" "}
           </strong>
         </p>
         <FeedbackHistory

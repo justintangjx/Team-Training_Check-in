@@ -10,7 +10,7 @@ class Navtabs extends Component {
             <Link
               to="/awesome"
               className="nav-link"
-              id="What was AWESOME-tab"
+              id="What was AWESOME-tab" // id has to be one word. also, you're not using this id, so you can delete this line of dead code
               data-toggle="tab"
               role="tab"
               aria-controls="What was AWESOME"
@@ -47,26 +47,27 @@ class Navtabs extends Component {
           </li>
         </ul>
 
-        <div className="tab-content" id="myTabContent">
+        {/* it looks to me like this next section has no body in the div. hence it's dead code and should be removed. */}
+        {/* <div className="tab-content" id="myTabContent">
           <div
-            class="tab-pane show active"
+            className="tab-pane show active" // class is a reserved word in javascript
             id="What was AWESOME"
             role="tabpanel"
             aria-labelledby="What was AWESOME-tab"
           />
           <div
-            class="tab-pane fade"
+            className="tab-pane fade"
             id="What to work on"
             role="tabpanel"
             aria-labelledby="What to work on-tab"
           />
           <div
-            class="tab-pane fade"
+            className="tab-pane fade"
             id="Team Temperature check"
             role="tabpanel"
             aria-labelledby="Team Temperature check-tab"
           />
-        </div>
+        </div> */}
       </div>
     );
   }
