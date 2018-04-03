@@ -31,6 +31,7 @@ class FeedbackBox extends Component {
   render() {
     return (
       <div id="feedbackHistory">
+      <br />
         <FeedbackForm
           saveFeedback={this.saveFeedback.bind(this)}
           newFeedback={this.state.newFeedback}

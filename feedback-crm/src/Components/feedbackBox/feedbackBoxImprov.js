@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { feedbackList } from "../../utils/seedData";
-import FeedbackForm from "../feedbackForm/feedbackForm";
 import FeedbackHistory from "../feedbackHistory/feedbackHistory";
 import FeedbackFormImprov from '../feedbackForm/feedbackFormImprov';
 

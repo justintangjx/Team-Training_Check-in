@@ -49,7 +49,7 @@ class Navtabs extends Component {
 
         <div className="tab-content" id="myTabContent">
           <div
-            class="tab-pane fade show active"
+            class="tab-pane show active"
             id="What was AWESOME"
             role="tabpanel"
             aria-labelledby="What was AWESOME-tab"

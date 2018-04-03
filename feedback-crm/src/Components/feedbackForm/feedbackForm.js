@@ -35,19 +35,19 @@ class FeedbackForm extends Component {
     const checkForNull = actionValue === "" || improvementValue === "";
     return (
       <form className="feedback-form" onSubmit={this.handleSubmit.bind(this)}>
-        <p className="text-primary text-center">
+        <h3 className="text-primary text-center">
           <strong> Based on the following action: </strong>
-        </p>
+        </h3>
         <textarea
           className="form-control border border-primary"
           value={this.state.actionValue}
           onChange={this.handleChangeForActionInput}
         />
         <br />
-        <p className="text-primary text-center">
+        <h3 className="text-primary text-center">
           <strong>Please continue to:</strong>
-        </p>
-        {/* <label><strong> Please continue to: </strong></label> */}
+        </h3>
+        
         <div className="feedback-form-fields">
           <textarea
             className="form-control border border-primary"
