@@ -28,6 +28,7 @@ class FeedbackForm extends Component {
   handleSubmit(event) {
     event.preventDefault();
     this.props.addFeedback(this.state.actionValue, this.state.improvementValue);
+    this.setState({ improvementValue: "", actionValue: "" }); // setState of input box values to "" after form is submitted
   }
 
   render() {
@@ -47,7 +48,7 @@ class FeedbackForm extends Component {
         <h3 className="text-primary text-center">
           <strong>Please continue to:</strong>
         </h3>
-        
+
         <div className="feedback-form-fields">
           <textarea
             className="form-control border border-primary"
@@ -60,13 +61,14 @@ class FeedbackForm extends Component {
           {!checkForNull && (
             <button className="btn btn-primary btn-lg">Submit feedback!</button>
           )}
-          <p/>
+          <p />
         </div>
       </form>
     );
   }
 }
 
+// Nice proptypes validation!
 FeedbackForm.propTypes = {
   addFeedback: PropTypes.func.isRequired
 };
