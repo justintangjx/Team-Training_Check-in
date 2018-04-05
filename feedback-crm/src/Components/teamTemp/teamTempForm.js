@@ -32,11 +32,11 @@ class TeamScoreForm extends Component {
     const checkForTwoEmptyFields = name === "" || weeklyScore === "";
     return (
       <form>
-        <div class="form-group">
+        <div className="form-group">
           <label for="nameInput">Employee's name</label>
           <input
             type="name"
-            class="form-control"
+            className="form-control"
             id="nameInput"
             aria-describedby="nameInput"
             placeholder="Enter name"
@@ -45,12 +45,12 @@ class TeamScoreForm extends Component {
           />
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
           <label for="exampleSelect1">
             On a scale of 1 to 10, how was your week?
           </label>
           <select
-            class="form-control"
+            className="form-control"
             id="exampleSelect1"
             value={this.state.weeklyScore}
             onChange={this.handleChangeForWeeklyScoreInput}
@@ -66,13 +66,13 @@ class TeamScoreForm extends Component {
             <option>9</option>
             <option>10</option>
           </select>
-          <small id="Help" class="form-text text-muted">
+          <small id="Help" className="form-text text-muted">
             Share how you feel, honestly :)
           </small>
         </div>
         <div className="feedback-form-actions text-center">
-          {!checkForTwoEmptyFields && (
-            <button type="button" class="btn btn-primary btn-lg">
+          {!checkForTwoEmptyFields || (
+            <button type="button" className="btn btn-primary btn-lg">
               Log in your temperature!
             </button>
           )}

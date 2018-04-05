@@ -49,19 +49,19 @@ class Navtabs extends Component {
 
         <div className="tab-content" id="myTabContent">
           <div
-            class="tab-pane show active"
+            className="tab-pane show active"
             id="What was AWESOME"
             role="tabpanel"
             aria-labelledby="What was AWESOME-tab"
           />
           <div
-            class="tab-pane fade"
+            className="tab-pane fade"
             id="What to work on"
             role="tabpanel"
             aria-labelledby="What to work on-tab"
           />
           <div
-            class="tab-pane fade"
+            className="tab-pane fade"
             id="Team Temperature check"
             role="tabpanel"
             aria-labelledby="Team Temperature check-tab"
