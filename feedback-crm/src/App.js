@@ -10,8 +10,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-      <div>
-
+      
         <div className="toplayout">
           <Navtabs />
           <Route exact path="/awesome" component={FeedbackBox} />
@@ -20,7 +19,6 @@ class App extends Component {
           <br />
         </div>
 
-        </div>
       </BrowserRouter>
     );
   }

@@ -33,7 +33,9 @@ class TeamScoreForm extends Component {
     return (
       <form>
         <div className="form-group">
-          <label for="nameInput">Employee's name</label>
+          <h3>
+            <label for="nameInput">Employee's name</label>
+          </h3>
           <input
             type="name"
             className="form-control"
@@ -46,9 +48,11 @@ class TeamScoreForm extends Component {
         </div>
 
         <div className="form-group">
-          <label for="exampleSelect1">
-            On a scale of 1 to 10, how was your week?
-          </label>
+          <h3>
+            <label for="exampleSelect1">
+              On a scale of 1 to 10, how was your week?
+            </label>
+          </h3>
           <select
             className="form-control"
             id="exampleSelect1"
@@ -71,7 +75,7 @@ class TeamScoreForm extends Component {
           </small>
         </div>
         <div className="feedback-form-actions text-center">
-          {!checkForTwoEmptyFields || (
+          {!checkForTwoEmptyFields && (
             <button type="button" className="btn btn-primary btn-lg">
               Log in your temperature!
             </button>
