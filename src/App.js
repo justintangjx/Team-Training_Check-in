@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <BrowserRouter>
       
-        <div className="toplayout">
+        <div className="container">
           <Navtabs />
           <Route exact path="/awesome" component={FeedbackBox} />
           <Route exact path="/toimprove" component ={FeedbackBoxImprov} />
