@@ -36,7 +36,7 @@ class FeedbackForm extends Component {
     return (
       <form className="feedback-form" onSubmit={this.handleSubmit.bind(this)}>
         <h3 className="text-primary text-center">
-          <strong> Based on the following action: </strong>
+          <strong> Workstream/task: </strong>
         </h3>
         <textarea
           className="form-control border border-primary"
@@ -45,9 +45,9 @@ class FeedbackForm extends Component {
         />
         <br />
         <h3 className="text-primary text-center">
-          <strong>Please continue to:</strong>
+          <strong>It went well because:</strong>
         </h3>
-        
+
         <div className="feedback-form-fields">
           <textarea
             className="form-control border border-primary"
@@ -58,9 +58,9 @@ class FeedbackForm extends Component {
         <p />
         <div className="feedback-form-actions text-center">
           {!checkForNull && (
-            <button className="btn btn-primary btn-lg">Submit feedback!</button>
+            <button className="btn btn-primary btn-lg">Submit!</button>
           )}
-          <p/>
+          <p />
         </div>
       </form>
     );

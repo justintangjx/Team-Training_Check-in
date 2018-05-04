@@ -38,7 +38,7 @@ class FeedbackBoxImprov extends Component {
         />
         <p className="p-3 mb-2 bg-secondary text-white text-center">
           <strong>
-            <em> Feedback History - Keep improving!</em>{" "}
+            <em> What didn't go so well this week</em>{" "}
           </strong>
         </p>
         <FeedbackHistory

@@ -34,7 +34,7 @@ class TeamScoreForm extends Component {
       <form>
         <div className="form-group">
           <h3>
-            <label for="nameInput">Employee's name</label>
+            <label for="nameInput">Teammate's name</label>
           </h3>
           <input
             type="name"

@@ -39,7 +39,7 @@ class FeedbackBox extends Component {
         />
         <p className="p-3 mb-2 bg-secondary text-white text-center">
           <strong>
-            <em> Feedback History - Well done!</em>{" "}
+            <em> What went well this week!</em>{" "}
           </strong>
         </p>
         <FeedbackHistory

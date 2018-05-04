@@ -36,7 +36,7 @@ class FeedbackFormImprov extends Component {
     return (
       <form className="feedback-form" onSubmit={this.handleSubmit.bind(this)}>
         <h3 className="text-primary text-center">
-          <strong> Based on the following action: </strong>
+          <strong> Workstream/task: </strong>
         </h3>
         <textarea
           className="form-control border border-primary"
@@ -45,7 +45,7 @@ class FeedbackFormImprov extends Component {
         />
         <br />
         <h3 className="text-primary text-center">
-          <strong>Please Start/Stop:</strong>
+          <strong>It didn't go so well because:</strong>
         </h3>
         {/* <label><strong> Please continue to: </strong></label> */}
         <div className="feedback-form-fields">
@@ -58,7 +58,7 @@ class FeedbackFormImprov extends Component {
         <p />
         <div className="feedback-form-actions text-center">
           {!checkForNull && (
-            <button className="btn btn-primary btn-lg">Submit feedback!</button>
+            <button className="btn btn-primary btn-lg">Submit!</button>
           )}
           <p/>
         </div>

@@ -29,7 +29,7 @@ class Navtabs extends Component {
               aria-controls="What to work on"
               aria-selected="false"
             >
-              What to work on
+              What didn't go well
             </Link>
           </li>
           <li className="nav-item">
