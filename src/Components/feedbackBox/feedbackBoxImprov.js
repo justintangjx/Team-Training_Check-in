@@ -31,6 +31,7 @@ class FeedbackBoxImprov extends Component {
   render() {
     return (
       <div id="feedbackHistory">
+      <br />
         <FeedbackFormImprov
           saveFeedback={this.saveFeedback.bind(this)}
           newFeedback={this.state.newFeedback}
