@@ -13,13 +13,11 @@ class TeamScoreForm extends Component {
     );
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-  handleChangeForWeeklyScoreInput(event) {
-    this.setState({ weeklyScore: event.target.value });
-  }
-
   handleChangeForNameInput(event) {
     this.setState({ name: event.target.value });
+  }
+  handleChangeForWeeklyScoreInput(event) {
+    this.setState({ weeklyScore: event.target.value });
   }
 
   handleSubmit(event) {

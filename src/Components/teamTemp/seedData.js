@@ -1,6 +1,6 @@
 
 
-const seedData = [
+var seedData = [
     { name: "Austin", "How was this week on a scale of 1 to 10": 2 },
     { name: "Bustin", "How was this week on a scale of 1 to 10": 5 },
     { name: "Custin", "How was this week on a scale of 1 to 10": 8 },
