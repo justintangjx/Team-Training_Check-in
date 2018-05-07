@@ -37,7 +37,7 @@ class TeamData extends Component {
             width={500}
             height={300}
             data={this.state.teamData}
-            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+            margin={{ top: 5, right: 10, left: 100, bottom: 5 }}
           >
             <XAxis dataKey="name" />
             <YAxis ticks={[2, 4, 6, 8, 10]} type="number" />
@@ -56,11 +56,11 @@ class TeamData extends Component {
   addInput(name, weeklyScore) {
     const exampleInput = {
       name: name,
-      weeklyScore: weeklyScore
+      "How was this week on a scale of 1 to 10": weeklyScore
     };
 
     this.setState({
-      teamData: this.state.teamData.concat([exampleInput])
+      teamData: this.state.teamData.concat(exampleInput)
     });
   }
 }

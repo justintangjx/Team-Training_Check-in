@@ -22,7 +22,7 @@ class TeamScoreForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.addFeedback(this.state.name, this.state.weeklyScore);
+    this.props.addInput(this.state.name, this.state.weeklyScore);
   }
 
   render() {
@@ -32,7 +32,7 @@ class TeamScoreForm extends Component {
       <form>
         <div className="form-group">
           <h3>
-            <label for="nameInput">Teammate's name</label>
+            <label id="nameInput">Teammate's name</label>
           </h3>
           <input
             type="name"
@@ -47,13 +47,15 @@ class TeamScoreForm extends Component {
 
         <div className="form-group">
           <h3>
-            <label for="exampleSelect1">
+            <label id="exampleSelect1">
               On a scale of 1 to 10, how was your week?
             </label>
           </h3>
           <select
             className="form-control"
             id="exampleSelect1"
+            // aria-describedby="scoreInput"
+            // placeholder="Enter score between 1 to 10"
             value={this.state.weeklyScore}
             onChange={this.handleChangeForWeeklyScoreInput}
           >
@@ -74,7 +76,7 @@ class TeamScoreForm extends Component {
         </div>
         <div className="feedback-form-actions text-center">
           {!checkForTwoEmptyFields && (
-            <button type="button" className="btn btn-primary btn-lg">
+            <button type="button" className="btn btn-primary btn-lg" onClick={this.handleSubmit} >
               Log in your temperature!
             </button>
           )}
